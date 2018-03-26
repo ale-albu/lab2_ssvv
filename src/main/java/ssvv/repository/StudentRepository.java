@@ -23,7 +23,7 @@ public class StudentRepository extends FileDataPersistence<Student> {
     public StudentRepository(String file) {
         super(file);
         this.file = file;
-//        loadData();
+        loadData();
     }
 
     private void loadData() {

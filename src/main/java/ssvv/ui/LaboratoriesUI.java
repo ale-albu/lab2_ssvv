@@ -81,9 +81,9 @@ public class LaboratoriesUI {
         System.out.println("Starting");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StudentRepository studentRepository = new StudentRepository("students.txt");
-        LabProblemRepository problemRepository = new LabProblemRepository("laboratories.txt");
-        AssignmentRepository assignmentRepository = new AssignmentRepository("assignments.txt");
+        StudentRepository studentRepository = new StudentRepository("src/main/java/ssvv/students.txt");
+        LabProblemRepository problemRepository = new LabProblemRepository("src/main/java/ssvv/laboratories.txt");
+        AssignmentRepository assignmentRepository = new AssignmentRepository("src/main/java/ssvv/assignments.txt");
         this.controller = new Controller(studentRepository, problemRepository, assignmentRepository);
 
         while(true){
@@ -160,7 +160,7 @@ public class LaboratoriesUI {
                     } catch (NumberFormatException|IOException|ParseException e) {
                         System.out.println("Invalid grade");
                     } catch (CustomException e) {
-                        e.printStackTrace();
+                        System.out.print(e.getMessage());
                     }
                     break;
 

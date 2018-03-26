@@ -42,18 +42,17 @@ public class Controller {
     }
 
     public void saveAssignment(Assignment assignment) throws CustomException {
-        Validator.validateAssignment(assignment);
-        int id = assignmentPersistence.getValidAssignmentId();
-        assignment.setId(id);
-        assignmentPersistence.save(id, assignment);
-//        if (Validator.validateAssignment(assignment)) {
-//            int id = assignmentPersistence.getValidAssignmentId();
-//            assignment.setId(id);
-//            this.assignmentPersistence.save(id, assignment);
-//            return true;
-//        } else {
-//            return false;
-//        }
+        if(Validator.validateAssignment(assignment)) {
+            if(!studentPersistence.findOne(assignment.getStudentRegistrationNumber()).isPresent()) {
+                throw new CustomException("There is no student with this registration number");
+            }
+            if(!laboratoryPersistence.findOne(assignment.getProblemNumber()).isPresent()) {
+                throw new CustomException("There is no lab problem with this number");
+            }
+            int id = assignmentPersistence.getValidAssignmentId();
+            assignment.setId(id);
+            assignmentPersistence.save(id, assignment);
+        }
     }
 
     public void addGrade(int studentRegNumber, int labNumber, float grade)

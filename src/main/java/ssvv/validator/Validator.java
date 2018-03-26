@@ -27,14 +27,13 @@ public class Validator {
         return labProblem.getLabProblemNumber() >= 1;
     }
 
-    public static void validateAssignment(Assignment assignment) throws CustomException {
+    public static boolean validateAssignment(Assignment assignment) throws CustomException {
         validateGrade(assignment.getGrade());
         if(assignment.getProblemNumber() < 1)
             throw new CustomException("Problem number should be >=1");
         if(assignment.getStudentRegistrationNumber() <= 0)
             throw new CustomException("Student registration number should be > 0");
-//        return assignment.getProblemNumber() >= 1 && validateGrade(assignment.getGrade())
-//                && assignment.getStudentRegistrationNumber() > 0;
+        return true;
     }
 
     public static void validateGrade(float grade) throws CustomException {
