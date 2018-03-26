@@ -13,7 +13,7 @@ public class Validator {
         if(student.getRegNumber() <= 0) {
             throw new CustomException("Registration number should be > 0");
         }
-        if(!student.getName().matches("[a-zA-Z]+[\\s]?[a-zA-Z]+")){
+        if(!student.getName().matches("[a-zA-Z]+[\\s]?[a-zA-Z]*")){
             throw new CustomException("Invalid name.");
         }
         if(student.getGroup() > 900 || student.getGroup() < 100) {
