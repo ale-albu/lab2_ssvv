@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff301ee-c30a-4ff3-b6b7-12dea572f47b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ssvv/assignments.txt" afterPath="$PROJECT_DIR$/src/test/java/ssvv/assignments.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ssvv/controller/ControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/ssvv/controller/ControllerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ssvv/students.txt" afterPath="$PROJECT_DIR$/src/test/java/ssvv/students.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ssvv/controller/ControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1">
@@ -117,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="students.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="students.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ssvv/students.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="238">
+              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -166,8 +163,8 @@
         <option value="$PROJECT_DIR$/src/test/java/ssvv/assignments.txt" />
         <option value="$PROJECT_DIR$/src/test/java/ssvv/laboratories.txt" />
         <option value="$PROJECT_DIR$/src/test/java/ssvv/repository/StudentRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ssvv/students.txt" />
         <option value="$PROJECT_DIR$/src/test/java/ssvv/controller/ControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ssvv/students.txt" />
       </list>
     </option>
   </component>
@@ -1098,7 +1095,7 @@
       <workItem from="1522053080102" duration="4084000" />
       <workItem from="1522066662140" duration="622000" />
       <workItem from="1522083444187" duration="6076000" />
-      <workItem from="1522136293231" duration="7204000" />
+      <workItem from="1522136293231" duration="7244000" />
     </task>
     <servers />
   </component>
@@ -1135,7 +1132,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34107000" />
+    <option name="totallyTimeSpent" value="34147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1578,18 +1575,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ssvv/students.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ssvv/controller/ControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="88" column="41" lean-forward="false" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ssvv/students.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding />
         </state>
       </provider>
