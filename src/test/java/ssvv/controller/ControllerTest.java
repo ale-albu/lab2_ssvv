@@ -1,9 +1,14 @@
 package ssvv.controller;
 
 import org.junit.Test;
+import ssvv.model.Assignment;
 import ssvv.model.CustomException;
 import ssvv.model.Student;
+import ssvv.repository.AssignmentRepository;
+import ssvv.repository.LabProblemRepository;
 import ssvv.repository.StudentRepository;
+
+import java.util.Date;
 
 import static org.junit.Assert.*;
 
@@ -12,6 +17,8 @@ import static org.junit.Assert.*;
  */
 public class ControllerTest {
     private StudentRepository repository;
+    private AssignmentRepository assignmentRepository;
+    private LabProblemRepository problemRepository;
     private Controller ctrl;
 
     private void testSuccessful(Student student) throws CustomException {
@@ -81,6 +88,41 @@ public class ControllerTest {
     public void saveStudentGroup6() throws Exception {
         Student student = new Student(6, "a", 901);
         testUnsuccessful(student);
+    }
+
+    @Test
+    public void saveAssignmentValid() throws Exception {
+        Assignment assignment = new Assignment(111, 1, new Date());
+        repository = new StudentRepository("src/test/java/ssvv/students.txt");
+        assignmentRepository = new AssignmentRepository("src/test/java/ssvv/assignments.txt");
+        problemRepository = new LabProblemRepository("src/test/java/ssvv/laboratories.txt");
+        int nr = assignmentRepository.findAll().size();
+        ctrl = new Controller(repository, problemRepository, assignmentRepository);
+
+        try {
+            ctrl.saveAssignment(assignment);
+            assertTrue(true);
+        } catch (CustomException e) {
+            System.out.println(e.getMessage());
+            assertTrue(false);
+        }
+    }
+
+    @Test
+    public void saveAssignmentInvalid() throws Exception {
+        Assignment assignment = new Assignment(-1, 1, new Date());
+        // invalid assignment
+        repository = new StudentRepository("src/test/java/ssvv/students.txt");
+        assignmentRepository = new AssignmentRepository("src/test/java/ssvv/assignments.txt");
+        problemRepository = new LabProblemRepository("src/test/java/ssvv/laboratories.txt");
+        ctrl = new Controller(repository, problemRepository, assignmentRepository);
+        int nr = assignmentRepository.findAll().size();
+        try {
+            ctrl.saveAssignment(assignment);
+            assertTrue(false);
+        } catch (CustomException e) {
+            assertTrue(true);
+        }
     }
 
 }
