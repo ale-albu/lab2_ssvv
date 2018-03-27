@@ -49,37 +49,37 @@ public class ControllerTest {
 
     @Test
     public void saveStudentGroup1() throws Exception {
-        Student student = new Student(1, "a", 100);
+        Student student = new Student(7, "a", 100);
         testSuccessful(student);
     }
 
     @Test
     public void saveStudentGroup2() throws Exception {
-        Student student = new Student(1, "a", 101);
+        Student student = new Student(2, "a", 101);
         testSuccessful(student);
     }
 
     @Test
     public void saveStudentGroup3() throws Exception {
-        Student student = new Student(1, "a", 99);
+        Student student = new Student(3, "a", 99);
         testUnsuccessful(student);
     }
 
     @Test
     public void saveStudentGroup4() throws Exception {
-        Student student = new Student(1, "a", 900);
+        Student student = new Student(4, "a", 900);
         testSuccessful(student);
     }
 
     @Test
     public void saveStudentGroup5() throws Exception {
-        Student student = new Student(1, "a", 899);
+        Student student = new Student(5, "a", 899);
         testSuccessful(student);
     }
 
     @Test
     public void saveStudentGroup6() throws Exception {
-        Student student = new Student(1, "a", 901);
+        Student student = new Student(6, "a", 901);
         testUnsuccessful(student);
     }
 
