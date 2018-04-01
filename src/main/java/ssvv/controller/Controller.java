@@ -41,6 +41,11 @@ public class Controller {
 //        }
     }
 
+    public void saveProblem(LabProblem problem) throws CustomException {
+        Validator.validateLaboratory(problem);
+        laboratoryPersistence.save(problem.getLabProblemNumber(), problem);
+    }
+
     public void saveAssignment(Assignment assignment) throws CustomException {
         if(Validator.validateAssignment(assignment)) {
             if(!studentPersistence.findOne(assignment.getStudentRegistrationNumber()).isPresent()) {

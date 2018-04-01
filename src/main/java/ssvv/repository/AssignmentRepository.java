@@ -56,8 +56,10 @@ public class AssignmentRepository extends FileDataPersistence<Assignment> {
     }
 
     public int getValidAssignmentId() {
-        int maxId = entities.keySet().stream().mapToInt(Integer::intValue).max().getAsInt();
-        return maxId + 1;
+        OptionalInt maxId = entities.keySet().stream().mapToInt(Integer::intValue).max();
+        if(maxId.isPresent())
+            return maxId.getAsInt() + 1;
+        return 1;
     }
 
     public boolean addGrade(int studentRegNumber, int labProblemNumber, float grade) {

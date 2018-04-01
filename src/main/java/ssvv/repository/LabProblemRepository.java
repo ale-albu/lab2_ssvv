@@ -22,11 +22,6 @@ public class LabProblemRepository extends FileDataPersistence<LabProblem> {
         loadData();
     }
 
-    @Override
-    public void save(int id, LabProblem labProblem) {
-
-    }
-
     private void loadData() {
         Path path = Paths.get(file);
 
