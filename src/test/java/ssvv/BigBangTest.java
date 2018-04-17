@@ -20,7 +20,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by Alexandra-Ioana on 4/16/2018.
  */
-public class BigBangIntegration {
+public class BigBangTest {
     private String studentsFile = "src/test/java/ssvv/students.txt",
             problemsFile = "src/test/java/ssvv/laboratories.txt",
             assignmentsFile = "src/test/java/ssvv/assignments.txt";
@@ -94,6 +94,25 @@ public class BigBangIntegration {
         assignmentRepository.save(4, new Assignment(1, 1, new Date(), 8));
 
         assertEquals(ctrl.passedStudents().size(), 2);
+    }
+
+    @Test
+    public void bigBangTest() throws Exception {
+        Student student1 = new Student(1, "a", 123),
+            student2 = new Student(2, "b", 100);
+        deleteContentAllFilesAndInit();
+        int nr = studentRepository.findAll().size();
+        ctrl.saveStudent(student1);
+        assertEquals(nr + 1, studentRepository.findAll().size());
+        ctrl.saveStudent(student2);
+        assertEquals(nr + 2, studentRepository.findAll().size());
+        ctrl.saveProblem(new LabProblem(1, "some text", 1));
+
+        ctrl.saveAssignment(new Assignment(1, 1, new Date(), 4));
+        ctrl.saveAssignment(new Assignment(2, 1, new Date(), 2));
+        ctrl.saveAssignment(new Assignment(1, 1, new Date(), 4.5f));
+
+        assertEquals(ctrl.passedStudents().size(), 0);
     }
 
 }
