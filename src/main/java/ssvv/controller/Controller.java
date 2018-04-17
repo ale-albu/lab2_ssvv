@@ -24,9 +24,6 @@ public class Controller {
     private AssignmentRepository assignmentPersistence;
 
     public Controller(Repository<Student> studentRepo, Repository<LabProblem> problemRepo, AssignmentRepository assignmentRepo) {
-//        this.studentPersistence = new StudentRepository("students.txt");
-//        this.laboratoryPersistence = new LabProblemRepository("laboratories.txt");
-//        this.assignmentPersistence = new AssignmentRepository("assignments.txt");
         studentPersistence = studentRepo; laboratoryPersistence = problemRepo; assignmentPersistence = assignmentRepo;
     }
 

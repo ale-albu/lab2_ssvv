@@ -6,9 +6,6 @@ public class Student {
     private String name;
     private int group;
 
-    public Student() {
-    }
-
     public Student(int regNumber, String name, int group) {
         this.regNumber = regNumber;
         this.name = name;

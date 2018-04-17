@@ -73,7 +73,7 @@ public class AssignmentRepository extends FileDataPersistence<Assignment> {
         return true;
     }
 
-    private Optional<Assignment> findAssignment(int studentRegNumber, int labProblemNumber) {
+    public Optional<Assignment> findAssignment(int studentRegNumber, int labProblemNumber) {
         return entities.values().stream()
                 .filter(a->a.getStudentRegistrationNumber() == studentRegNumber && a.getProblemNumber()==labProblemNumber)
                 .findFirst();
