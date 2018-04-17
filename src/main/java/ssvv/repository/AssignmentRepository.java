@@ -67,6 +67,9 @@ public class AssignmentRepository extends FileDataPersistence<Assignment> {
         if(!assignmentOptional.isPresent())
             return false;
         Assignment assignment = assignmentOptional.get();
+        if(grade <=0) {
+            return false;
+        }
         assignment.setGrade(grade);
         entities.put(assignment.getId(), assignment);
         saveAllToFile();

@@ -57,10 +57,10 @@ public class Controller {
         }
     }
 
-    public void addGrade(int studentRegNumber, int labNumber, float grade)
+    public boolean addGrade(int studentRegNumber, int labNumber, float grade)
             throws NumberFormatException, IOException, ParseException, CustomException {
         Validator.validateGrade(grade);
-        assignmentPersistence.addGrade(studentRegNumber, labNumber, grade);
+        return assignmentPersistence.addGrade(studentRegNumber, labNumber, grade);
 //        return Validator.validateGrade(grade) && this.assignmentPersistence.addGrade(studentRegNumber, labNumber, grade);
     }
 
