@@ -21,7 +21,7 @@ import ssvv.BigBangTest.*;
 /**
  * Created by Alexandra-Ioana on 4/17/2018.
  */
-public class Incrementalntegration {
+public class IntegrationTest {
     private String studentsFile = "src/test/java/ssvv/students.txt",
             problemsFile = "src/test/java/ssvv/laboratories.txt",
             assignmentsFile = "src/test/java/ssvv/assignments.txt";
